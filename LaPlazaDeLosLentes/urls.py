@@ -26,4 +26,6 @@ urlpatterns = [
     path('hello_world/', views.hello_world),
 
     path('list/', views.list1),
+
+    path('hi/<str:name>/<int:age>/', views.hi),
 ]

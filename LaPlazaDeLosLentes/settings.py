@@ -54,7 +54,9 @@ ROOT_URLCONF = 'LaPlazaDeLosLentes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'LaPlazaDeLosLentes/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

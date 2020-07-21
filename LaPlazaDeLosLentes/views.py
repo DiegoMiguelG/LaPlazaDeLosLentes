@@ -1,6 +1,7 @@
 #Django
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.shortcuts import render
 
 #Utilities
 from datetime import datetime
@@ -25,4 +26,11 @@ def list1(request):
     
 
 def index(request):
-    return HttpResponse('hi')
+    return render(request, 'index.html')
+
+def hi(request, name, age):
+    if age >= 18:
+        return HttpResponse(f'Acceso concedido. Bienvenido {name}')
+    else:
+        return HttpResponse(f'Acceso denegado. Disculpa {name}, usted no cuenta con la edad minima requerida para hacer uso de este sitio')
+    
